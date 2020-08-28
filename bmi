@@ -1,0 +1,27 @@
+print('Введите ваше имя')
+name = input()
+print('Введите ваш возраст')
+age = int(input())
+print('Добрый день', name)
+print('Введите ваш рост')
+height = float(input())
+print('Введите ваш вес')
+weight = float(input())
+if age < 10 or height <= 0 or height > 3 or weight > 500:
+  print('Вы ввели ошибочные данные')
+else:
+  bmi = weight / height ** 2
+  
+  bmi = round(bmi, 2)
+  
+  print("Ваш индекс массы тела: ", str(bmi))
+
+if bmi < 18.5:
+    description = 'Недостаточная масса тела'
+elif bmi < 25:
+    description ='Нормальная масса тела'
+elif bmi < 30:
+    description = 'Избыточная масса тела'
+else:
+    description = 'Ожирение'
+print('Согласно индексу массы тела у вас', description)
